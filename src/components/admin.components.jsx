@@ -20,7 +20,7 @@ export default function Admin() {
             const res = await Axios({
                 method: 'GET',
                 withCredentials: true,
-                url: 'http://localhost:5000/user/getUser'
+                url: 'https://pportal-server.herokuapp.com/user/getUser'
             });
             // console.log(res);
             return res;
@@ -29,7 +29,7 @@ export default function Admin() {
 
         async function getListings() {
             const data = await Axios({
-                url: 'http://localhost:5000/listings?branch=all',
+                url: 'https://pportal-server.herokuapp.com/?branch=all',
                 method: 'GET',
                 withCredentials: true
             });

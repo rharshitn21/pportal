@@ -46,7 +46,7 @@ function Register(props) {
             body: JSON.stringify(registerInput)
         };
 
-        fetch('http://localhost:5000/user/register', requestOptions)
+        fetch('https://pportal-server.herokuapp.com/user/register', requestOptions)
             .then(response => (response.json()))
             .then(x => {
                 if(x.code === 406) {
@@ -114,7 +114,7 @@ function Login(props)  {
         const requestOptions = {
             method: "POST",
             withCredentials: true,
-            url: 'http://localhost:5000/user/login',
+            url: 'https://pportal-server.herokuapp.com/user/login',
             data:  loginInput
         };
 
@@ -130,7 +130,7 @@ function Login(props)  {
             const res = await Axios({
                 method: 'GET',
                 withCredentials: true,
-                url: 'http://localhost:5000/user/getUser'
+                url: 'https://pportal-server.herokuapp.com/user/getUser'
             });
             // console.log(res);
             const userData = await res.data;
@@ -213,7 +213,7 @@ export default function Home() {
             const res = await Axios({
                 method: 'GET',
                 withCredentials: true,
-                url: 'http://localhost:5000/user/getUser'
+                url: 'https://pportal-server.herokuapp.com/user/getUser'
             });
             // console.log(res);
             return res;

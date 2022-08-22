@@ -27,7 +27,7 @@ export default function NewListingForm() {
             body: JSON.stringify(formInputs)
         };
 
-        fetch('http://localhost:5000/listings/add', requestOptions)
+        fetch('https://pportal-server.herokuapp.com/listings/add', requestOptions)
             .then(response => {
                 if(response.status === 200)
                     alert('Job Posted Successfully!!')
@@ -56,7 +56,7 @@ export default function NewListingForm() {
             const res = await Axios({
                 method: 'GET',
                 withCredentials: true,
-                url: 'http://localhost:5000/user/getUser'
+                url: 'https://pportal-server.herokuapp.com/user/getUser'
             });
             // console.log(res);
             return res;

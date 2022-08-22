@@ -13,7 +13,7 @@ export default function Logout(props) {
         const res = await Axios({
             method: 'POST',
             withCredentials: true,
-            url: 'http://localhost:5000/user/logout'
+            url: 'https://pportal-server.herokuapp.com/user/logout'
         });
         console.log(res);
         navigate("/");
