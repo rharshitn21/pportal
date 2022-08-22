@@ -66,7 +66,7 @@ export function Branch(props) {
         if(isChecked) {
             props.setValue((prev)=>({
                 ...prev,
-                ["branch"]: [...prev.branch, e.target.value]
+                "branch": [...prev.branch, e.target.value]
             }))
         }
         else {

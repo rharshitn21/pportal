@@ -41,7 +41,7 @@ export default function NewListingForm() {
         setFormInputs((prev)=>{
             return {
                 ...prev,
-                ["deadline"]: e
+                "deadline": e
             }
         });
     }
